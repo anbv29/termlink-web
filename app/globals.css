@@ -76,12 +76,54 @@ a { color: inherit; }
 .navSource { padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; }
 .section { min-height: 70vh; padding-block: 128px; }
 .hero { display: grid; min-height: 100svh; place-items: center; }
+.heroContent { position: relative; z-index: 2; padding-top: 64px; text-align: center; }
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 28px;
+  color: var(--blue-deep);
+  font-size: 0.82rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.eyebrow span { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 6px rgba(18, 104, 232, 0.1); }
 h1, h2 { margin: 0; letter-spacing: -0.06em; }
-h1 { font-size: clamp(4rem, 13vw, 9rem); }
+h1 { font-size: clamp(3.5rem, 8vw, 7.15rem); line-height: 0.95; }
 h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
+.heroLead {
+  max-width: 670px;
+  margin: 30px auto 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.7;
+}
+.heroActions { display: flex; align-items: center; justify-content: center; gap: 24px; margin-top: 38px; }
+.button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 0 22px;
+  border-radius: 13px;
+  font-weight: 720;
+  text-decoration: none;
+}
+.buttonPrimary { color: white; background: var(--blue); box-shadow: 0 14px 30px rgba(18, 104, 232, 0.25); transition: transform 180ms ease, box-shadow 180ms ease; }
+.buttonPrimary:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(18, 104, 232, 0.32); }
+.textLink { color: var(--blue-deep); font-weight: 700; text-decoration: none; }
+.heroNote { margin: 22px auto 0; color: #7890ad; font-size: 0.78rem; }
 .siteFooter { border-top: 1px solid var(--line); }
 .footerShell { padding-block: 40px; }
 @media (max-width: 640px) {
   :root { --page: min(100% - 32px, 1160px); }
   .navLinks { display: none; }
+  .heroActions { flex-direction: column; gap: 18px; }
+  .button { width: 100%; }
+  .heroContent { text-align: left; }
+  .heroLead { margin-left: 0; }
+  .heroActions { align-items: stretch; }
+  .heroNote { margin-left: 0; }
 }
