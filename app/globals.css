@@ -101,6 +101,21 @@ a { color: inherit; }
 h1, h2 { margin: 0; letter-spacing: -0.06em; }
 h1 { font-size: clamp(3.5rem, 8vw, 7.15rem); line-height: 0.95; }
 h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
+.kicker { margin: 0 0 16px; color: var(--blue); font-size: 0.78rem; font-weight: 780; letter-spacing: 0.1em; text-transform: uppercase; }
+.sectionIntro { max-width: 780px; }
+.sectionIntro > p:last-child { max-width: 620px; margin: 24px 0 0; color: var(--muted); font-size: 1.08rem; line-height: 1.7; }
+.promiseSection { padding-top: 160px; }
+.promiseGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 64px; }
+.glassCard {
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  background: var(--glass);
+  box-shadow: var(--shadow), inset 0 0 0 1px var(--line);
+  backdrop-filter: blur(16px) saturate(140%);
+}
+.promiseCard { min-height: 270px; padding: 26px; border-radius: 22px; }
+.cardNumber { color: var(--blue); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; }
+.promiseCard h3 { margin: 68px 0 12px; font-size: 1.22rem; letter-spacing: -0.03em; }
+.promiseCard p { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.65; }
 .heroLead {
   max-width: 670px;
   margin: 30px auto 0;
@@ -135,4 +150,14 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
   .heroLead { margin-left: 0; }
   .heroActions { align-items: stretch; }
   .heroNote { margin-left: 0; }
+}
+
+@media (max-width: 960px) {
+  .promiseGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .promiseGrid { grid-template-columns: 1fr; }
+  .promiseCard { min-height: 220px; }
+  .promiseCard h3 { margin-top: 46px; }
 }
