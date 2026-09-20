@@ -27,6 +27,10 @@ if (html.includes("github.com")) {
   throw new Error("Static page still contains a GitHub redirect.");
 }
 
+if (!html.includes("<title>TermLink</title>")) {
+  throw new Error("Browser title must be exactly TermLink.");
+}
+
 await stat(join(output, "manifest.webmanifest"));
 await stat(join(output, "robots.txt"));
 

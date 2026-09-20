@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TermLink — Chat That Never Touches the Internet",
+  title: "TermLink",
   description: "Private, end-to-end encrypted terminal chat over Bluetooth Low Energy. No internet, server, account, database, or permanent message history.",
   applicationName: "TermLink",
   category: "technology",
