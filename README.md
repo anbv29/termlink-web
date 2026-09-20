@@ -26,9 +26,10 @@ Open `http://localhost:3000`.
 ```powershell
 npm run check
 npm run build
+npm test
 ```
 
-The production-ready static site is written to `out/`. Serve that folder with any static web server. No Node.js server is required in production.
+The production-ready static site is written to `out/`. Serve that folder with any static web server. No Node.js server is required in production. `npm test` also verifies the exported routes, essential page copy, and the exact size and SHA-256 digest of the downloadable archive.
 
 ## Updating the download
 

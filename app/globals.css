@@ -169,7 +169,7 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
 .downloadPanel { display: grid; grid-template-columns: 1.05fr .95fr; gap: 8vw; padding: clamp(34px, 6vw, 78px); border-radius: 32px; }
 .downloadCopy > p:last-child { max-width: 510px; margin: 26px 0 0; color: var(--muted); line-height: 1.7; }
 .downloadAction { align-self: center; }
-.downloadButton { width: 100%; min-height: 76px; justify-content: space-between; padding-inline: 24px; }
+.button.downloadButton { width: 100%; min-height: 76px; justify-content: space-between; padding-inline: 24px; }
 .downloadButton > span:first-child { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .downloadButton small { opacity: .72; font-size: .69rem; font-weight: 600; }
 .downloadArrow { font-size: 1.3rem; }
