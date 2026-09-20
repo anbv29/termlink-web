@@ -2,6 +2,7 @@ import { Logo } from "@/components/Logo";
 import { NavBar } from "@/components/NavBar";
 import { MeshField } from "@/components/MeshField";
 import { PromiseGrid } from "@/components/PromiseGrid";
+import { FeatureGrid } from "@/components/FeatureGrid";
 
 export default function Home() {
   return (
@@ -37,7 +38,16 @@ export default function Home() {
             <PromiseGrid />
           </div>
         </section>
-        <section className="section" id="features" aria-labelledby="features-title"><div className="shell"><h2 id="features-title">Features</h2></div></section>
+        <section className="section featureSection" id="features" aria-labelledby="features-title">
+          <div className="shell">
+            <div className="sectionIntro">
+              <p className="kicker">Built for the radio silence</p>
+              <h2 id="features-title">Small footprint.<br />Serious protocol.</h2>
+              <p>A local-first tool can still be careful about identity, delivery, and unreliable connections.</p>
+            </div>
+            <FeatureGrid />
+          </div>
+        </section>
         <section className="section" id="how-it-works" aria-labelledby="workflow-title"><div className="shell"><h2 id="workflow-title">How it works</h2></div></section>
         <section className="section" id="download" aria-labelledby="download-title"><div className="shell"><h2 id="download-title">Download</h2></div></section>
       </main>
