@@ -3,6 +3,7 @@ import { NavBar } from "@/components/NavBar";
 import { MeshField } from "@/components/MeshField";
 import { PromiseGrid } from "@/components/PromiseGrid";
 import { FeatureGrid } from "@/components/FeatureGrid";
+import { WorkflowSteps } from "@/components/WorkflowSteps";
 
 export default function Home() {
   return (
@@ -48,7 +49,16 @@ export default function Home() {
             <FeatureGrid />
           </div>
         </section>
-        <section className="section" id="how-it-works" aria-labelledby="workflow-title"><div className="shell"><h2 id="workflow-title">How it works</h2></div></section>
+        <section className="section workflowSection" id="how-it-works" aria-labelledby="workflow-title">
+          <div className="shell workflowLayout">
+            <div className="sectionIntro workflowIntro">
+              <p className="kicker">How it works</p>
+              <h2 id="workflow-title">Four steps.<br />No middleman.</h2>
+              <p>Everything needed for the conversation exists only while the two terminals are talking.</p>
+            </div>
+            <WorkflowSteps />
+          </div>
+        </section>
         <section className="section" id="download" aria-labelledby="download-title"><div className="shell"><h2 id="download-title">Download</h2></div></section>
       </main>
       <footer className="siteFooter"><div className="shell footerShell"><Logo /><span>Offline by design.</span></div></footer>

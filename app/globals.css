@@ -123,6 +123,15 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
 .featureSymbol { display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid var(--line); border-radius: 12px; color: var(--blue); background: white; font-size: 0.68rem; font-weight: 850; letter-spacing: -0.02em; box-shadow: 0 8px 24px rgba(18, 104, 232, 0.08); }
 .featureCard h3 { margin: 0 0 9px; font-size: 1.05rem; letter-spacing: -0.025em; }
 .featureCard p { max-width: 31rem; margin: 0; color: var(--muted); font-size: 0.88rem; line-height: 1.65; }
+.workflowSection { padding-top: 180px; }
+.workflowLayout { display: grid; grid-template-columns: minmax(280px, 0.8fr) minmax(460px, 1.2fr); gap: 9vw; align-items: start; }
+.workflowIntro { position: sticky; top: 132px; }
+.workflowSteps { margin: 0; padding: 0; list-style: none; }
+.workflowSteps li { display: grid; grid-template-columns: 62px 1fr; gap: 24px; padding: 36px 0; border-top: 1px solid var(--line); }
+.workflowSteps li:last-child { border-bottom: 1px solid var(--line); }
+.stepNumber { display: grid; width: 44px; height: 44px; place-items: center; border-radius: 50%; color: white; background: var(--blue); font-size: 0.72rem; font-weight: 800; box-shadow: 0 8px 24px rgba(18, 104, 232, 0.22); }
+.workflowSteps h3 { margin: 1px 0 10px; font-size: 1.35rem; letter-spacing: -0.035em; }
+.workflowSteps p { margin: 0; color: var(--muted); font-size: 0.94rem; line-height: 1.7; }
 .heroLead {
   max-width: 670px;
   margin: 30px auto 0;
@@ -162,6 +171,8 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
 @media (max-width: 960px) {
   .promiseGrid { grid-template-columns: repeat(2, 1fr); }
   .featureGrid { grid-template-columns: repeat(2, 1fr); }
+  .workflowLayout { grid-template-columns: 1fr; gap: 48px; }
+  .workflowIntro { position: static; }
 }
 
 @media (max-width: 560px) {
