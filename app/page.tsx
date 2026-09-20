@@ -5,6 +5,7 @@ import { PromiseGrid } from "@/components/PromiseGrid";
 import { FeatureGrid } from "@/components/FeatureGrid";
 import { WorkflowSteps } from "@/components/WorkflowSteps";
 import { NetworkDiagram } from "@/components/NetworkDiagram";
+import { DownloadPanel } from "@/components/DownloadPanel";
 
 export default function Home() {
   return (
@@ -61,7 +62,9 @@ export default function Home() {
             <div className="workflowDiagram"><NetworkDiagram /></div>
           </div>
         </section>
-        <section className="section" id="download" aria-labelledby="download-title"><div className="shell"><h2 id="download-title">Download</h2></div></section>
+        <section className="section downloadSection" id="download" aria-labelledby="download-title">
+          <div className="shell"><DownloadPanel /></div>
+        </section>
       </main>
       <footer className="siteFooter"><div className="shell footerShell"><Logo /><span>Offline by design.</span></div></footer>
     </>

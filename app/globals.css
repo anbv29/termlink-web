@@ -152,6 +152,26 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
 .packetTwo { right: 26%; }
 .networkDiagram figcaption { display: flex; justify-content: space-between; padding: 18px 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: .72rem; font-weight: 650; }
 @keyframes routePulse { from { transform: translateX(-110%); } to { transform: translateX(370%); } }
+.downloadSection { display: grid; min-height: 95svh; place-items: center; }
+.downloadPanel { display: grid; grid-template-columns: 1.05fr .95fr; gap: 8vw; padding: clamp(34px, 6vw, 78px); border-radius: 32px; }
+.downloadCopy > p:last-child { max-width: 510px; margin: 26px 0 0; color: var(--muted); line-height: 1.7; }
+.downloadAction { align-self: center; }
+.downloadButton { width: 100%; min-height: 76px; justify-content: space-between; padding-inline: 24px; }
+.downloadButton > span:first-child { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.downloadButton small { opacity: .72; font-size: .69rem; font-weight: 600; }
+.downloadArrow { font-size: 1.3rem; }
+.fileFacts { display: grid; grid-template-columns: repeat(3, 1fr); margin: 18px 0 0; padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.fileFacts div { padding: 0 14px; border-right: 1px solid var(--line); }
+.fileFacts div:first-child { padding-left: 0; }
+.fileFacts div:last-child { border: 0; }
+.fileFacts dt { color: var(--muted); font-size: .67rem; }
+.fileFacts dd { margin: 5px 0 0; font-size: .82rem; font-weight: 750; }
+.githubButton { display: flex; min-height: 48px; align-items: center; gap: 10px; margin-top: 18px; padding: 0 15px; border: 1px solid rgba(7, 71, 166, .2); border-radius: 11px; color: var(--blue-deep); background: rgba(255,255,255,.8); font-size: .82rem; font-weight: 720; text-decoration: none; }
+.githubButton > span:last-child { margin-left: auto; }
+.githubMark { font-family: ui-monospace, monospace; font-weight: 850; }
+.checksum { margin-top: 14px; color: var(--muted); font-size: .68rem; }
+.checksum summary { cursor: pointer; }
+.checksum code { display: block; margin-top: 9px; overflow-wrap: anywhere; color: var(--blue-deep); line-height: 1.55; }
 .heroLead {
   max-width: 670px;
   margin: 30px auto 0;
@@ -193,6 +213,7 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
   .featureGrid { grid-template-columns: repeat(2, 1fr); }
   .workflowLayout { grid-template-columns: 1fr; gap: 48px; }
   .workflowIntro { position: static; }
+  .downloadPanel { grid-template-columns: 1fr; gap: 52px; }
 }
 
 @media (max-width: 560px) {
