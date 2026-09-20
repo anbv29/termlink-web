@@ -1,5 +1,6 @@
 import { Logo } from "@/components/Logo";
 import { NavBar } from "@/components/NavBar";
+import { MeshField } from "@/components/MeshField";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <NavBar />
       <main id="main-content">
         <section className="section hero" id="top" aria-labelledby="hero-title">
+          <MeshField />
           <div className="shell heroContent">
             <p className="eyebrow"><span aria-hidden="true" /> Private messaging, off the grid</p>
             <h1 id="hero-title">Chat that never<br />touches the internet.</h1>
