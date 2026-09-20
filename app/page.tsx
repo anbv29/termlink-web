@@ -38,7 +38,7 @@ export default function Home() {
               </a>
               <a className="textLink" href="#how-it-works">See how it works <span aria-hidden="true">→</span></a>
             </div>
-            <p className="heroNote">Free and open source · Windows 10/11 · Portable</p>
+            <p className="heroNote">Free · Compatible with Windows 10/11 · Portable</p>
           </div>
           <div className="shell heroProtocolWrap"><HeroProtocol /></div>
         </section>
