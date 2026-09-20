@@ -12,6 +12,10 @@ const requiredCopy = [
   "End-to-end encrypted",
   "Four steps.",
   "Download for Windows",
+  "Inside a live session",
+  "Memory only",
+  "No signal here. Still with me?",
+  ".\\TermLink.exe --chat",
 ];
 
 for (const copy of requiredCopy) {
