@@ -43,6 +43,7 @@ export function NavBar() {
       <nav className="shell navShell" aria-label="Primary navigation">
         <a className="brand" href="#top"><Logo /></a>
         <div className="navLinks">
+          <a className={activeSection === "demo" ? "isActive" : ""} aria-current={activeSection === "demo" ? "location" : undefined} href="#demo">Demo</a>
           <a className={activeSection === "features" ? "isActive" : ""} aria-current={activeSection === "features" ? "location" : undefined} href="#features">Features</a>
           <a className={activeSection === "how-it-works" ? "isActive" : ""} aria-current={activeSection === "how-it-works" ? "location" : undefined} href="#how-it-works">How it works</a>
           <a className={activeSection === "download" ? "isActive" : ""} aria-current={activeSection === "download" ? "location" : undefined} href="#download">Download</a>

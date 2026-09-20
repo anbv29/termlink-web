@@ -10,6 +10,7 @@ import { RevealObserver } from "@/components/RevealObserver";
 import { CursorTrail } from "@/components/CursorTrail";
 import { HeroProtocol } from "@/components/HeroProtocol";
 import { SpotlightPointer } from "@/components/SpotlightPointer";
+import { TerminalPreview } from "@/components/TerminalPreview";
 
 export default function Home() {
   return (
@@ -47,6 +48,16 @@ export default function Home() {
               <p>TermLink removes the infrastructure that usually stands between two people.</p>
             </div>
             <PromiseGrid />
+          </div>
+        </section>
+        <section className="section demoSection" id="demo" aria-labelledby="demo-title">
+          <div className="shell">
+            <div className="sectionIntro demoIntro" data-reveal>
+              <p className="kicker">Inside a live session</p>
+              <h2 id="demo-title">A terminal that<br />leaves no trail.</h2>
+              <p>Verify the person, talk directly, then close the window. The conversation exists only for the session.</p>
+            </div>
+            <TerminalPreview />
           </div>
         </section>
         <section className="section featureSection" id="features" aria-labelledby="features-title">
