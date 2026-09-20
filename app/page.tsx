@@ -7,11 +7,13 @@ import { NetworkDiagram } from "@/components/NetworkDiagram";
 import { DownloadPanel } from "@/components/DownloadPanel";
 import { Footer } from "@/components/Footer";
 import { RevealObserver } from "@/components/RevealObserver";
+import { CursorTrail } from "@/components/CursorTrail";
 
 export default function Home() {
   return (
     <>
       <RevealObserver />
+      <CursorTrail />
       <a className="skip-link" href="#main-content">Skip to content</a>
       <NavBar />
       <main id="main-content">
