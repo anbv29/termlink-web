@@ -1,4 +1,3 @@
-import { Logo } from "@/components/Logo";
 import { NavBar } from "@/components/NavBar";
 import { MeshField } from "@/components/MeshField";
 import { PromiseGrid } from "@/components/PromiseGrid";
@@ -6,6 +5,7 @@ import { FeatureGrid } from "@/components/FeatureGrid";
 import { WorkflowSteps } from "@/components/WorkflowSteps";
 import { NetworkDiagram } from "@/components/NetworkDiagram";
 import { DownloadPanel } from "@/components/DownloadPanel";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -66,7 +66,7 @@ export default function Home() {
           <div className="shell"><DownloadPanel /></div>
         </section>
       </main>
-      <footer className="siteFooter"><div className="shell footerShell"><Logo /><span>Offline by design.</span></div></footer>
+      <Footer />
     </>
   );
 }

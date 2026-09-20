@@ -196,7 +196,15 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
 .textLink { color: var(--blue-deep); font-weight: 700; text-decoration: none; }
 .heroNote { margin: 22px auto 0; color: #7890ad; font-size: 0.78rem; }
 .siteFooter { border-top: 1px solid var(--line); }
-.footerShell { padding-block: 40px; }
+.footerShell { align-items: flex-start; padding-block: 72px; }
+.footerBrand { max-width: 380px; }
+.footerBrand p { margin: 22px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.7; }
+.footerLinks { display: grid; grid-template-columns: repeat(2, 130px); gap: 56px; }
+.footerLinks div { display: flex; flex-direction: column; gap: 12px; }
+.footerLinks span { margin-bottom: 4px; color: #87a0bf; font-size: .67rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.footerLinks a { color: var(--ink); font-size: .82rem; font-weight: 650; text-decoration: none; }
+.footerLinks a:hover { color: var(--blue); }
+.footerBottom { display: flex; justify-content: space-between; padding: 22px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .7rem; }
 @media (max-width: 640px) {
   :root { --page: min(100% - 32px, 1160px); }
   .navLinks { display: none; }
@@ -234,6 +242,9 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
   .packetOne { top: 31%; }
   .packetTwo { top: 69%; }
   .networkDiagram figcaption { gap: 20px; }
+  .footerShell { flex-direction: column; gap: 48px; }
+  .footerLinks { width: 100%; justify-content: space-between; gap: 24px; }
+  .footerBottom { flex-direction: column; gap: 8px; }
 }
 
 @keyframes routePulseVertical { from { transform: translateY(-110%); } to { transform: translateY(370%); } }
