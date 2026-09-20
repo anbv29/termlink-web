@@ -6,10 +6,12 @@ import { WorkflowSteps } from "@/components/WorkflowSteps";
 import { NetworkDiagram } from "@/components/NetworkDiagram";
 import { DownloadPanel } from "@/components/DownloadPanel";
 import { Footer } from "@/components/Footer";
+import { RevealObserver } from "@/components/RevealObserver";
 
 export default function Home() {
   return (
     <>
+      <RevealObserver />
       <a className="skip-link" href="#main-content">Skip to content</a>
       <NavBar />
       <main id="main-content">
@@ -33,7 +35,7 @@ export default function Home() {
         </section>
         <section className="section promiseSection" id="promise" aria-labelledby="promise-title">
           <div className="shell">
-            <div className="sectionIntro">
+            <div className="sectionIntro" data-reveal>
               <p className="kicker">The core promise</p>
               <h2 id="promise-title">Private by design.<br />Temporary on purpose.</h2>
               <p>TermLink removes the infrastructure that usually stands between two people.</p>
@@ -43,7 +45,7 @@ export default function Home() {
         </section>
         <section className="section featureSection" id="features" aria-labelledby="features-title">
           <div className="shell">
-            <div className="sectionIntro">
+            <div className="sectionIntro" data-reveal>
               <p className="kicker">Built for the radio silence</p>
               <h2 id="features-title">Small footprint.<br />Serious protocol.</h2>
               <p>A local-first tool can still be careful about identity, delivery, and unreliable connections.</p>
@@ -53,17 +55,17 @@ export default function Home() {
         </section>
         <section className="section workflowSection" id="how-it-works" aria-labelledby="workflow-title">
           <div className="shell workflowLayout">
-            <div className="sectionIntro workflowIntro">
+            <div className="sectionIntro workflowIntro" data-reveal>
               <p className="kicker">How it works</p>
               <h2 id="workflow-title">Four steps.<br />No middleman.</h2>
               <p>Everything needed for the conversation exists only while the two terminals are talking.</p>
             </div>
             <WorkflowSteps />
-            <div className="workflowDiagram"><NetworkDiagram /></div>
+            <div className="workflowDiagram" data-reveal><NetworkDiagram /></div>
           </div>
         </section>
         <section className="section downloadSection" id="download" aria-labelledby="download-title">
-          <div className="shell"><DownloadPanel /></div>
+          <div className="shell" data-reveal><DownloadPanel /></div>
         </section>
       </main>
       <Footer />

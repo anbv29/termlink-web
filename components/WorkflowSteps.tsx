@@ -9,7 +9,7 @@ export function WorkflowSteps() {
   return (
     <ol className="workflowSteps">
       {steps.map((step) => (
-        <li key={step.number}>
+        <li data-reveal key={step.number}>
           <span className="stepNumber">{step.number}</span>
           <div><h3>{step.title}</h3><p>{step.copy}</p></div>
         </li>

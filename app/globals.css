@@ -274,3 +274,18 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
 }
 
 @keyframes routePulseVertical { from { transform: translateY(-110%); } to { transform: translateY(370%); } }
+
+.revealReady [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 760ms cubic-bezier(.16, 1, .3, 1), transform 760ms cubic-bezier(.16, 1, .3, 1);
+}
+.revealReady [data-reveal].isVisible { opacity: 1; transform: translateY(0); }
+.promiseGrid [data-reveal]:nth-child(2),
+.featureGrid [data-reveal]:nth-child(2) { transition-delay: 70ms; }
+.promiseGrid [data-reveal]:nth-child(3),
+.featureGrid [data-reveal]:nth-child(3) { transition-delay: 140ms; }
+.promiseGrid [data-reveal]:nth-child(4),
+.featureGrid [data-reveal]:nth-child(4) { transition-delay: 210ms; }
+.featureGrid [data-reveal]:nth-child(3n + 2) { transition-delay: 70ms; }
+.featureGrid [data-reveal]:nth-child(3n) { transition-delay: 140ms; }
