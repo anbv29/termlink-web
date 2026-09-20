@@ -16,10 +16,15 @@ const requiredCopy = [
   "Memory only",
   "No signal here. Still with me?",
   ".\\TermLink.exe --chat",
+  "Built in Rust by Anubhav",
 ];
 
 for (const copy of requiredCopy) {
   if (!html.includes(copy)) throw new Error(`Static page is missing: ${copy}`);
+}
+
+if (html.includes("github.com")) {
+  throw new Error("Static page still contains a GitHub redirect.");
 }
 
 await stat(join(output, "manifest.webmanifest"));

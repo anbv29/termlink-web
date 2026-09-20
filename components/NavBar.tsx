@@ -48,8 +48,8 @@ export function NavBar() {
           <a className={activeSection === "how-it-works" ? "isActive" : ""} aria-current={activeSection === "how-it-works" ? "location" : undefined} href="#how-it-works">How it works</a>
           <a className={activeSection === "download" ? "isActive" : ""} aria-current={activeSection === "download" ? "location" : undefined} href="#download">Download</a>
         </div>
-        <a className="navSource" href="https://github.com/anbv29/termlink" target="_blank" rel="noreferrer">
-          Source <span aria-hidden="true">↗</span>
+        <a className="navDownload" href="#download">
+          Get TermLink <span aria-hidden="true">↓</span>
         </a>
       </nav>
       <span className="scrollProgress" style={{ transform: `scaleX(${progress})` }} aria-hidden="true" />

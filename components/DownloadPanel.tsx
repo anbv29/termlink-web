@@ -39,10 +39,6 @@ export function DownloadPanel() {
             {copied ? "Copied" : "Copy"}
           </button>
         </div>
-        <a className="githubButton" href="https://github.com/anbv29/termlink" target="_blank" rel="noreferrer">
-          <span className="githubMark" aria-hidden="true">&lt;/&gt;</span>
-          View source on GitHub <span aria-hidden="true">↗</span>
-        </a>
         <details className="checksum">
           <summary>SHA-256 checksum</summary>
           <code>{checksum}</code>

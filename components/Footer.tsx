@@ -9,11 +9,11 @@ export function Footer() {
           <p>Private, temporary communication for the moments when the network is not an option.</p>
         </div>
         <div className="footerLinks" aria-label="Project links">
-          <div><span>Project</span><a href="https://github.com/anbv29/termlink" target="_blank" rel="noreferrer">Source code</a><a href="#features">Features</a></div>
-          <div><span>Details</span><a href="https://github.com/anbv29/termlink-web/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT license</a><a href="https://github.com/anbv29/termlink/issues" target="_blank" rel="noreferrer">Contact</a></div>
+          <div><span>Explore</span><a href="#demo">Demo</a><a href="#features">Features</a></div>
+          <div><span>TermLink</span><a href="#how-it-works">How it works</a><a href="#download">Download</a></div>
         </div>
       </div>
-      <div className="shell footerBottom"><span>© 2026 TermLink</span><span>Made in Rust. Presented in Next.js.</span></div>
+      <div className="shell footerBottom"><span>© 2026 TermLink</span><span>Built in Rust by Anubhav</span></div>
     </footer>
   );
 }
