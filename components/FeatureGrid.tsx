@@ -18,7 +18,7 @@ export function FeatureGrid() {
   return (
     <div className="featureGrid">
       {features.map(([symbol, title, copy], index) => (
-        <article className={`featureCard${index === 0 || index === 12 ? " featureWide" : ""}`} data-reveal key={title}>
+        <article className={`featureCard${index === 0 || index === 12 ? " featureWide" : ""}`} data-reveal data-spotlight key={title}>
           <span className="featureSymbol" aria-hidden="true">{symbol}</span>
           <div>
             <h3>{title}</h3>

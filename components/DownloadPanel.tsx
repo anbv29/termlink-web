@@ -2,7 +2,7 @@ const checksum = "2E8F98F680861373959440B08C8C7D845D46EE833EB970317D1A20EF40417A
 
 export function DownloadPanel() {
   return (
-    <div className="downloadPanel glassCard">
+    <div className="downloadPanel glassCard" data-spotlight>
       <div className="downloadCopy">
         <p className="kicker">Ready when you are</p>
         <h2 id="download-title">Take TermLink<br />off the grid.</h2>

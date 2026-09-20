@@ -9,12 +9,14 @@ import { Footer } from "@/components/Footer";
 import { RevealObserver } from "@/components/RevealObserver";
 import { CursorTrail } from "@/components/CursorTrail";
 import { HeroProtocol } from "@/components/HeroProtocol";
+import { SpotlightPointer } from "@/components/SpotlightPointer";
 
 export default function Home() {
   return (
     <>
       <RevealObserver />
       <CursorTrail />
+      <SpotlightPointer />
       <a className="skip-link" href="#main-content">Skip to content</a>
       <NavBar />
       <main id="main-content">

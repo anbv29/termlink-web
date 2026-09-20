@@ -9,7 +9,7 @@ export function PromiseGrid() {
   return (
     <div className="promiseGrid">
       {promises.map((item) => (
-        <article className="glassCard promiseCard" data-reveal key={item.number}>
+        <article className="glassCard promiseCard" data-reveal data-spotlight key={item.number}>
           <span className="cardNumber">{item.number}</span>
           <h3>{item.title}</h3>
           <p>{item.copy}</p>
