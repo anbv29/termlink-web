@@ -1,21 +1,11 @@
 import { Logo } from "@/components/Logo";
+import { NavBar } from "@/components/NavBar";
 
 export default function Home() {
   return (
     <>
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <header className="siteHeader">
-        <nav className="shell navShell" aria-label="Primary navigation">
-          <a className="brand" href="#top">
-            <Logo />
-          </a>
-          <div className="nav-links">
-            <a href="#features">Features</a>
-            <a href="#how-it-works">How it works</a>
-            <a href="#download">Download</a>
-          </div>
-        </nav>
-      </header>
+      <NavBar />
       <main id="main-content">
         <section className="section hero" id="top" aria-labelledby="hero-title"><div className="shell"><h1 id="hero-title">TermLink</h1></div></section>
         <section className="section" id="promise" aria-labelledby="promise-title"><div className="shell"><h2 id="promise-title">Private by design.</h2></div></section>

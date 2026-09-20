@@ -38,10 +38,23 @@ a { color: inherit; }
 }
 .skip-link:focus { transform: translateY(0); }
 .shell { width: var(--page); margin-inline: auto; }
-.siteHeader { position: fixed; inset: 18px 0 auto; z-index: 20; }
+.siteHeader { position: fixed; inset: 18px 0 auto; z-index: 20; pointer-events: none; }
 .navShell, .footerShell { display: flex; align-items: center; justify-content: space-between; }
-.navShell { min-height: 58px; padding-inline: 18px; }
-.brand, .nav-links { display: flex; align-items: center; }
+.navShell {
+  min-height: 58px;
+  padding-inline: 18px;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  pointer-events: auto;
+  transition: background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease, backdrop-filter 300ms ease;
+}
+.isScrolled .navShell {
+  border-color: rgba(18, 104, 232, 0.13);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 14px 44px rgba(30, 84, 153, 0.11);
+  backdrop-filter: blur(18px) saturate(150%);
+}
+.brand, .navLinks { display: flex; align-items: center; }
 .brand { font-weight: 750; text-decoration: none; }
 .logo { display: inline-flex; align-items: center; gap: 10px; letter-spacing: -0.03em; }
 .logoMark {
@@ -57,8 +70,10 @@ a { color: inherit; }
 .logoMark span { position: absolute; display: block; border-radius: 999px; background: white; }
 .logoMark span:first-child { width: 14px; height: 3px; transform: translateY(-4px); }
 .logoMark span:last-child { width: 3px; height: 14px; transform: translateY(3px); }
-.nav-links { gap: 28px; }
-.nav-links a { color: var(--muted); font-size: 0.9rem; font-weight: 650; text-decoration: none; }
+.navLinks { gap: 28px; }
+.navLinks a, .navSource { color: var(--muted); font-size: 0.9rem; font-weight: 650; text-decoration: none; transition: color 180ms ease; }
+.navLinks a:hover, .navSource:hover { color: var(--blue); }
+.navSource { padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; }
 .section { min-height: 70vh; padding-block: 128px; }
 .hero { display: grid; min-height: 100svh; place-items: center; }
 h1, h2 { margin: 0; letter-spacing: -0.06em; }
@@ -68,5 +83,5 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
 .footerShell { padding-block: 40px; }
 @media (max-width: 640px) {
   :root { --page: min(100% - 32px, 1160px); }
-  .nav-links { display: none; }
+  .navLinks { display: none; }
 }
