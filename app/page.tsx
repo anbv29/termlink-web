@@ -4,6 +4,7 @@ import { MeshField } from "@/components/MeshField";
 import { PromiseGrid } from "@/components/PromiseGrid";
 import { FeatureGrid } from "@/components/FeatureGrid";
 import { WorkflowSteps } from "@/components/WorkflowSteps";
+import { NetworkDiagram } from "@/components/NetworkDiagram";
 
 export default function Home() {
   return (
@@ -57,6 +58,7 @@ export default function Home() {
               <p>Everything needed for the conversation exists only while the two terminals are talking.</p>
             </div>
             <WorkflowSteps />
+            <div className="workflowDiagram"><NetworkDiagram /></div>
           </div>
         </section>
         <section className="section" id="download" aria-labelledby="download-title"><div className="shell"><h2 id="download-title">Download</h2></div></section>

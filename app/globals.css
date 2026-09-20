@@ -132,6 +132,26 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
 .stepNumber { display: grid; width: 44px; height: 44px; place-items: center; border-radius: 50%; color: white; background: var(--blue); font-size: 0.72rem; font-weight: 800; box-shadow: 0 8px 24px rgba(18, 104, 232, 0.22); }
 .workflowSteps h3 { margin: 1px 0 10px; font-size: 1.35rem; letter-spacing: -0.035em; }
 .workflowSteps p { margin: 0; color: var(--muted); font-size: 0.94rem; line-height: 1.7; }
+.workflowDiagram { grid-column: 1 / -1; margin-top: 44px; }
+.networkDiagram { margin: 0; overflow: hidden; border-radius: 28px; }
+.diagramStage { position: relative; min-height: 410px; background: radial-gradient(circle at center, rgba(18, 104, 232, 0.12), transparent 38%); }
+.peer { position: absolute; z-index: 2; display: flex; width: 118px; height: 88px; flex-direction: column; align-items: center; justify-content: center; border: 1px solid rgba(18, 104, 232, 0.18); border-radius: 18px; color: var(--blue-deep); background: rgba(255,255,255,.9); box-shadow: 0 16px 36px rgba(13, 70, 145, 0.12); font-size: .69rem; font-weight: 850; letter-spacing: .09em; }
+.peer small { margin-top: 7px; color: var(--muted); font-size: .62rem; font-weight: 650; letter-spacing: 0; }
+.peerAlice { top: 50%; left: 8%; transform: translateY(-50%); }
+.peerRelay { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.peerFriend { top: 50%; right: 8%; transform: translateY(-50%); }
+.statusDot { width: 7px; height: 7px; margin-bottom: 9px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 6px rgba(18,104,232,.11); }
+.relayRings { width: 22px; height: 22px; margin-bottom: 4px; border: 1px solid var(--blue); border-radius: 50%; box-shadow: 0 0 0 6px rgba(18,104,232,.08), 0 0 0 12px rgba(18,104,232,.04); }
+.connection { position: absolute; top: 50%; z-index: 1; height: 1px; overflow: hidden; background: rgba(18,104,232,.2); }
+.connectionOne { right: 50%; left: calc(8% + 118px); }
+.connectionTwo { right: calc(8% + 118px); left: 50%; }
+.connection i { position: absolute; width: 38%; height: 1px; background: linear-gradient(90deg, transparent, var(--blue), transparent); animation: routePulse 2.8s ease-in-out infinite; }
+.connectionTwo i { animation-delay: 1.35s; }
+.packet { position: absolute; top: calc(50% - 34px); z-index: 2; padding: 6px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--blue-deep); background: white; font-size: .62rem; font-weight: 750; }
+.packetOne { left: 27%; }
+.packetTwo { right: 26%; }
+.networkDiagram figcaption { display: flex; justify-content: space-between; padding: 18px 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: .72rem; font-weight: 650; }
+@keyframes routePulse { from { transform: translateX(-110%); } to { transform: translateX(370%); } }
 .heroLead {
   max-width: 670px;
   margin: 30px auto 0;
@@ -181,4 +201,18 @@ h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
   .promiseCard h3 { margin-top: 46px; }
   .featureGrid { grid-template-columns: 1fr; }
   .featureWide { grid-column: auto; }
+  .diagramStage { min-height: 520px; }
+  .peerAlice { top: 10%; left: 50%; transform: translateX(-50%); }
+  .peerRelay { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+  .peerFriend { top: auto; right: auto; bottom: 10%; left: 50%; transform: translateX(-50%); }
+  .connection { top: auto; left: 50%; width: 1px; height: 24%; }
+  .connectionOne { top: calc(10% + 88px); right: auto; }
+  .connectionTwo { top: calc(50% + 44px); right: auto; }
+  .connection i { width: 1px; height: 38%; background: linear-gradient(transparent, var(--blue), transparent); animation-name: routePulseVertical; }
+  .packet { left: calc(50% + 14px); right: auto; }
+  .packetOne { top: 31%; }
+  .packetTwo { top: 69%; }
+  .networkDiagram figcaption { gap: 20px; }
 }
+
+@keyframes routePulseVertical { from { transform: translateY(-110%); } to { transform: translateY(370%); } }
