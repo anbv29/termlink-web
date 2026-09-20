@@ -8,6 +8,7 @@ import { DownloadPanel } from "@/components/DownloadPanel";
 import { Footer } from "@/components/Footer";
 import { RevealObserver } from "@/components/RevealObserver";
 import { CursorTrail } from "@/components/CursorTrail";
+import { HeroProtocol } from "@/components/HeroProtocol";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
             </div>
             <p className="heroNote">Free and open source · Windows 10/11 · Portable</p>
           </div>
+          <div className="shell heroProtocolWrap"><HeroProtocol /></div>
         </section>
         <section className="section promiseSection" id="promise" aria-labelledby="promise-title">
           <div className="shell">
