@@ -1,6 +1,21 @@
+"use client";
+
+import { useState } from "react";
+
 const checksum = "2E8F98F680861373959440B08C8C7D845D46EE833EB970317D1A20EF40417A24";
 
 export function DownloadPanel() {
+  const [copied, setCopied] = useState(false);
+  const copyCommand = async () => {
+    try {
+      await navigator.clipboard.writeText(".\\TermLink.exe --chat");
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
+
   return (
     <div className="downloadPanel glassCard" data-spotlight>
       <div className="downloadCopy">
@@ -18,6 +33,12 @@ export function DownloadPanel() {
           <div><dt>Platform</dt><dd>Windows x64</dd></div>
           <div><dt>Size</dt><dd>687 KB</dd></div>
         </dl>
+        <div className="runCommand">
+          <code><span aria-hidden="true">PS›</span> .\TermLink.exe --chat</code>
+          <button type="button" onClick={copyCommand} aria-label="Copy TermLink run command">
+            {copied ? "Copied" : "Copy"}
+          </button>
+        </div>
         <a className="githubButton" href="https://github.com/anbv29/termlink" target="_blank" rel="noreferrer">
           <span className="githubMark" aria-hidden="true">&lt;/&gt;</span>
           View source on GitHub <span aria-hidden="true">↗</span>

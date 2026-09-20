@@ -11,6 +11,7 @@ import { CursorTrail } from "@/components/CursorTrail";
 import { HeroProtocol } from "@/components/HeroProtocol";
 import { SpotlightPointer } from "@/components/SpotlightPointer";
 import { TerminalPreview } from "@/components/TerminalPreview";
+import { PageUtilities } from "@/components/PageUtilities";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <RevealObserver />
       <CursorTrail />
       <SpotlightPointer />
+      <PageUtilities />
       <a className="skip-link" href="#main-content">Skip to content</a>
       <NavBar />
       <main id="main-content">
